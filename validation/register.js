@@ -21,7 +21,7 @@ module.exports = function validateRegisterInput(data) {
     errors.email = 'Email field is required';
   }
 
-  if (!Validator.isEmail(data.email)) {
+  if (!Validator.isEmail(data.email)) {// Usually here  should be *!Validator*, but somehow it doesn't work that way,idk wth 
     errors.email = 'Email is invalid';
   }
 
